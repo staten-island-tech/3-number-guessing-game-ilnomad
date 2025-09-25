@@ -18,10 +18,21 @@ def countdown():
             print("0")
 
 def numberguess():
-    x=input("Minimum?")
-    y=input("Maximum?")
+    x=0
+    y=1
     x=int(x)
     y=int(y)
-    random.randint(x,y)
-
+    t=False
+    n=random.randint(x,y)
+    while not t==True:
+        x=input("Minimum?")
+        y=input("Maximum?")
+        m=input("Guess de number")
+        if n == m:
+            print("great job")
+            t=True
+        else:
+            n=random.randint(x,y)
+            print("guess again")
+            numberguess
 numberguess()
