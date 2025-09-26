@@ -31,10 +31,12 @@ def numberguess2():
             print("Your number is smaller than the random one ")
             guesshistory.append(m)
             i=i+1
+            print(guesshistory)
         elif m>n:
             print("Your number is greater than the random one ")
             guesshistory.append(m)
             i=i+1
+            print(guesshistory)
         else:
             print("You won 10 won money thingy currencie thing ")
             for i in range(i-1):
