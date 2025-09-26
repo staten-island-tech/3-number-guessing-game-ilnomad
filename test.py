@@ -4,35 +4,39 @@ random_number = random.random()
 print(random_number)
 
 def countdown():
-    number=input("countdown from")
+    number=input("countdown from ")
     number=int(number)
     print(number)
-    while number <0 or number >1:
-        if number > 1:
-            number = number - 1
+    while number<0 or number>1:
+        if number>1:
+            number=number-1
             print(number)
-        elif number < 1:
-            number = number + 1
+        elif number<1:
+            number=number+1
             print(number)
         else:
             print("0")
+def numberguess2():
 
-def numberguess():
-    x=0
-    y=1
-    x=int(x)
-    y=int(y)
-    t=False
+
+    guesshistory=[]
+    x=int(input("Min? "))
+    y=int(input("Max? "))
     n=random.randint(x,y)
-    while not t==True:
-        x=input("Minimum?")
-        y=input("Maximum?")
-        m=input("Guess de number")
-        if n == m:
-            print("great job")
-            t=True
+    i=0
+    m=0
+    while not n==m:
+        m=int(input("Guess a number "))
+        if n>m:
+            print("Your number is smaller than the random one ")
+            guesshistory.append(m)
+            i=i+1
+        elif m>n:
+            print("Your number is greater than the random one ")
+            guesshistory.append(m)
+            i=i+1
         else:
-            n=random.randint(x,y)
-            print("guess again")
-            numberguess
-numberguess()
+            print("You won 10 won money thingy currencie thing ")
+            for i in range(i-1):
+                print(guesshistory[i])
+
